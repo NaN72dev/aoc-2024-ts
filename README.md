@@ -34,6 +34,18 @@ pnpm dev 2
 #> 689
 ```
 
+# [Day 3](https://adventofcode.com/2024/day/3)
+
+*2025-01-13 (~30m)*
+
+Well I prompted my AI to generate the regex. Who write their own regex anyway?
+
+```sh
+pnpm dev 3
+#> 174561379
+#> 106921067
+```
+
 # [Day 5](https://adventofcode.com/2024/day/5)
 
 *2025-01-15 (~2h20m)*
