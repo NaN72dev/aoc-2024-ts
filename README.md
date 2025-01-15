@@ -1,6 +1,6 @@
 # Advent of Code 2024
 
-My ***really late*** and ***very janky*** attempt to solve [Advent of Code 2024](https://adventofcode.com/2024)
+My ***really late*** and ***very janky*** attempt to solve [Advent of Code 2024](https://adventofcode.com/2024) using Typescript.
 
 Install dependencies to run the code.
 
