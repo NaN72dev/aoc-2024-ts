@@ -1,12 +1,14 @@
-# aoc-2024
+# Advent of Code 2024
 
 My ***really late*** and ***very janky*** attempt to solve [Advent of Code 2024](https://adventofcode.com/2024)
 
-Install dependencies to run the code
+Install dependencies to run the code.
 
 ```sh
 pnpm install
 ```
+
+This repo is generated with [Advent of Code Typescript Template](https://github.com/edge33/AdventOfCode-typescript-template), day 1 - 4 is imported from [my own repo](https://github.com/NaN72dev/aoc-2024`).
 
 # [Day 1](https://adventofcode.com/2024/day/1)
 
