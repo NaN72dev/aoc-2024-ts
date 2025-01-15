@@ -46,6 +46,18 @@ pnpm dev 3
 #> 106921067
 ```
 
+# [Day 4](https://adventofcode.com/2024/day/4)
+
+*2025-01-14 (~60m)*
+
+The logic might be right, but the comments are probably wrong.
+
+```sh
+pnpm dev 4
+#> 2567
+#> 2029
+```
+
 # [Day 5](https://adventofcode.com/2024/day/5)
 
 *2025-01-15 (~2h20m)*
