@@ -1,80 +1,21 @@
-# 🎄 AdventOfCode-typescript-template 🎄
+# aoc-2024
 
-This is a TypeScript boilerplate for Advent of Code.
+My ***really late*** and ***very janky*** attempt to solve [Advent of Code 2024](https://adventofcode.com/2024)
 
-built with ❤️ and:
+Install dependencies to run the code
 
-- [typescript](https://www.typescriptlang.org/) 👨‍💻
-- [vitest](https://vitest.dev/) 🧪
-- [bun](https://bun.sh/) 🧅
-
-## 👷‍♂️ Project structure
-
-the project has the following structure:
-
-```
-src
-- days: contains the solutions for the puzzles
-- scripts: utility scripts for development lifecycle
-- types: types and interfaces
-- utils: utility scripts used for development and problem solving (i.e read an input file)
+```sh
+pnpm install
 ```
 
-## 🚀 Getting started
+# [Day 5](https://adventofcode.com/2024/day/5)
 
-This readme assumes you are using [pnpm](https://pnpm.io/) as package manager, but any other package manager will do.
+> 2025-01-15 (~2h20m)
 
-The runtime used for this project is bun [bun](https://bun.sh/), check the docs for installing it.
+I was tripping on part 2 of this puzzle. It's a shame that I need [hint](https://www.reddit.com/r/adventofcode/comments/1h71twj/comment/m0hxi6s/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) to solve this one (solved 5m after the hint).
 
-install all required dependencies with `pnpm i`
-
-## 🎄 Adding a new puzzle
-
-when the new AoC puzzle is available run `pnpm init-day {day}`
-
-replace `{day}` with the number of the advent day, i.e. `pnpm init-day 2`.
-
-This command will create a new directory in the `days` folder with the following content
-
-- `Puzzle.ts`: the boilerplate module with the placeholder methods for solving both daily puzzles
-- `index.txt`: the input file where to add the puzzle input
-
-The structure of the boilerplate module is the following:
-
-```typescript
-const first = (input: string) => {
-  console.log(input);
-  return 'solution 1';
-};
-
-const expectedFirstSolution = 'solution 1';
-
-const second = (input: string) => {
-  console.log(input);
-  return 'solution 2';
-};
-
-const expectedSecondSolution = 'solution 2';
-
-export { first, expectedFirstSolution, second, expectedSecondSolution };
+```sh
+pnpm dev 5
+#> 5129
+#> 4077
 ```
-
-## 🔧 Development
-
-When your solution is ready, or when you want to start developing incrementally (watch mode) run `pnpm dev {day}` where {day} is the day you are working on, i.e. `pnpm dev 1` will run the puzzle class for day 1.
-
-## 🧪 Testing
-
-You can run test for all puzzles agains their expected output with `pnpm t` this will test all the solutions in the `days` folder
-
-## 🛫 Contributing
-
-Every contribution is welcome. Just fork this repo and open a MR with your changes, and don't forget to add your name to the contributors section of this README.
-
-## 👨👩 Contributors
-
-[Francesco Maida](https://edge33.github.io)
-
-[Devin Spikowski](https://github.com/vegeta897)
-
-[Nitish Thiyagarajan](https://www.tnitish.com)
