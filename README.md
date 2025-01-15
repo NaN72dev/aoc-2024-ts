@@ -8,7 +8,9 @@ Install dependencies to run the code.
 pnpm install
 ```
 
-This repo is generated with [Advent of Code Typescript Template](https://github.com/edge33/AdventOfCode-typescript-template), day 1 - 4 is imported from [my own repo](https://github.com/NaN72dev/aoc-2024`).
+This repo is generated
+with [Advent of Code Typescript Template](https://github.com/edge33/AdventOfCode-typescript-template), day 1 - 4 is
+imported from [my own repo](https://github.com/NaN72dev/aoc-2024`).
 
 # [Day 1](https://adventofcode.com/2024/day/1)
 
@@ -20,12 +22,25 @@ pnpm dev 1
 #> 23228917
 ```
 
+# [Day 2](https://adventofcode.com/2024/day/2)
+
+*2025-01-10 (~1h30m)*
+
+Brute forcing part 2, I'm not proud of it, but it's not that bad.
+
+```sh
+pnpm dev 2
+#> 660
+#> 689
+```
 
 # [Day 5](https://adventofcode.com/2024/day/5)
 
 *2025-01-15 (~2h20m)*
 
-I was tripping on part 2 of this puzzle. It's a shame that I need [hint](https://www.reddit.com/r/adventofcode/comments/1h71twj/comment/m0hxi6s/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) to solve this one (solved 5m after the hint).
+I was tripping on part 2 of this puzzle. It's a shame that I
+need [hint](https://www.reddit.com/r/adventofcode/comments/1h71twj/comment/m0hxi6s/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+to solve this one (solved 5m after the hint).
 
 ```sh
 pnpm dev 5
