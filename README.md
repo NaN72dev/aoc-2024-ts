@@ -1,6 +1,7 @@
 # Advent of Code 2024
 
-My ***really late*** and ***very janky*** attempt to solve [Advent of Code 2024](https://adventofcode.com/2024) using Typescript.
+My ***really late*** and ***very janky*** attempt to solve [Advent of Code 2024](https://adventofcode.com/2024) using
+Typescript.
 
 Install dependencies to run the code.
 
@@ -74,10 +75,10 @@ pnpm dev 5
 
 # [Day 6](https://adventofcode.com/2024/day/6)
 
-*2025-01-16 (~...)*
+*2025-01-16 (~ 1h + 30m)*
 
 ```sh
 pnpm dev 6
 #> 5131
-#> 
+#> 1784
 ```

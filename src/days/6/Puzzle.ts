@@ -110,9 +110,74 @@ const first = (input: string) => {
 const expectedFirstSolution = 41;
 
 const second = (input: string) => {
-  return 'solution 2';
+  const map = input.split('\n')
+    .filter(s => s !== '')
+    .map(l => l.split(''));
+
+  // find guard coords
+  const originGuard = map.flatMap((row, y) => {
+    return row.map((cell, x) => {
+      if (cell === Type.GUARD) {
+        return { x, y };
+      }
+      return undefined;
+    }).filter(x => x !== undefined);
+  })[0];
+  let count = 0;
+
+  for (let i = 0; i < map.length; i++) {
+    for (let j = 0; j < map[i].length; j++) {
+      const mapClone = [] as string[][];
+      map.forEach(row => mapClone.push([...row]));
+
+      if (isWall(map, { x: j, y: i })) {
+        continue;
+      }
+
+      if (map[i][j] === Type.GUARD) {
+        continue;
+      }
+
+      // console.log(`replaced ${i} ${j} with ${Type.WALL}`);
+      mapClone[i][j] = Type.WALL;
+
+      // this is ok
+
+      // simulate to route & record the visited coords
+      const visited = new Set<string>();
+      let guard = originGuard;
+      let direction = Direction.UP;
+
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        const nextCoord = getNextCoord(guard, direction);
+        const isNextCoordWall = isWall(mapClone, nextCoord);
+
+        if (isNextCoordWall) {
+          if (isOutOfMap(mapClone, nextCoord)) {
+            // console.log('out of map', i, j);
+            break;
+          }
+
+          direction = getDirectionAfterTurn(direction);
+          continue;
+        }
+
+        const value = JSON.stringify({ guard, direction });
+        if (visited.has(value)) {
+          count++;
+          break;
+        }
+
+        guard = nextCoord;
+        visited.add(value);
+      }
+    }
+  }
+
+  return count;
 };
 
-const expectedSecondSolution = 'solution 2';
+const expectedSecondSolution = 6;
 
 export { first, expectedFirstSolution, second, expectedSecondSolution };
