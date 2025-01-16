@@ -71,3 +71,13 @@ pnpm dev 5
 #> 5129
 #> 4077
 ```
+
+# [Day 6](https://adventofcode.com/2024/day/6)
+
+*2025-01-16 (~...)*
+
+```sh
+pnpm dev 6
+#> 5131
+#> 
+```
