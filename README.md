@@ -85,10 +85,19 @@ pnpm dev 6
 
 # [Day 7](https://adventofcode.com/2024/day/7)
 
-*2025-01-16 (~ 1h30m + ...)*
+*2025-01-16 (~ 1h30m + 30m)*
+
+I was planning to use backtracking and spent an hour working on it but didn't get it to work. Turns out the loop I used
+to iterate over the equations was wrong, so I got stuck in an infinite loop, not because of my backtracking algorithm!
+
+Then I misunderstood the calculation, thought it should be normal math, but it's not lol. The same problem goes to part
+2, I though I should eliminate the `||` operator, but it's not the case. I just need to add a new case to the switch
+statement,but I was overthinking it.
+
+Reading is really important, guys. What a shame of me.
 
 ```sh
 pnpm dev 7
 #> 2437272016585
-#> ...
+#> 162987117690649
 ```
