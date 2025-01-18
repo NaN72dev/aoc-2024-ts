@@ -85,7 +85,7 @@ pnpm dev 6
 
 # [Day 7](https://adventofcode.com/2024/day/7)
 
-*2025-01-16 (~ 1h30m + 30m)*
+*2025-01-17 (~ 1h30m + 30m)*
 
 I was planning to use backtracking and spent an hour working on it but didn't get it to work. Turns out the loop I used
 to iterate over the equations was wrong, so I got stuck in an infinite loop, not because of my backtracking algorithm!
@@ -100,4 +100,27 @@ Reading is really important, guys. What a shame of me.
 pnpm dev 7
 #> 2437272016585
 #> 162987117690649
+```
+
+# [Day 8](https://adventofcode.com/2024/day/8)
+
+*2025-01-18 (~ 1h + ...)*
+
+I was a game developer so right after reading the puzzle I already know what to do to solve it, coordinates are just the
+heart of a tons of games, even with ones that doesn't seem to have a coordinate system.
+
+I passed the test for part 1 but the answer for my input is wrong, I'm not sure why.
+Update: I thought that if an anti-node is overlapped with an antenna, it doesn't count, but I was wrong.
+
+Turns out some of the ati-node is overlapped with another anti-node. I as using `Set<Vector>` to remove duplicates, but
+it doesn't work well with `Vector`, after stringify the vector for the `Set`, it works.
+
+Btw, TIL that everyone has their own inputs for their AoC puzzles.
+> That's not the right answer; your answer is too low. Curiously, it's the right answer for someone else; you might be
+> logged in to the wrong account or just unlucky. In any case, you need to be using your puzzle input.
+
+```sh
+pnpm dev 8
+#> 369
+#> 
 ```

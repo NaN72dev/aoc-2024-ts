@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      vecti:
+        specifier: ^3.0.11
+        version: 3.0.11
     devDependencies:
       '@types/node':
         specifier: ^20.10.1
@@ -906,6 +910,9 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  vecti@3.0.11:
+    resolution: {integrity: sha512-MP3B8nE44L0rdB8XcZQRxPa5Rb8OBeFHU2AK5TEDEdR3Rnj1R0JmSAPpauupTGY//XFYG7B4Jfxa93tTTQhwgA==}
 
   vite-node@0.34.6:
     resolution: {integrity: sha512-nlBMJ9x6n7/Amaz6F3zJ97EBwR2FkzhBRxF5e+jE6LA3yi6Wtc2lyTij1OnDMIr34v5g/tVQtsVAzhT0jc5ygA==}
@@ -1822,6 +1829,8 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  vecti@3.0.11: {}
 
   vite-node@0.34.6(@types/node@20.10.1):
     dependencies:
