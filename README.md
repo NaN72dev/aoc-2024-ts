@@ -119,7 +119,7 @@ Btw, TIL that everyone has their own inputs for their AoC puzzles.
 > That's not the right answer; your answer is too low. Curiously, it's the right answer for someone else; you might be
 > logged in to the wrong account or just unlucky. In any case, you need to be using your puzzle input.
 
-I missed the part that the antennas themselves are also anti-nodes, I just need to add them to the `Set<string>`. I have
+In part 2, I missed the part that the antennas themselves are also anti-nodes, I just need to add them to the `Set<string>`. I have
 a feeling that if there is 2 antennas that doesn't generate anti-nodes within bounds, the answer will be wrong but my
 current answer gave me the star so I won't investigate further.
 
