@@ -104,7 +104,7 @@ pnpm dev 7
 
 # [Day 8](https://adventofcode.com/2024/day/8)
 
-*2025-01-18 (~ 1h + ...)*
+*2025-01-18 (~ 1h + 30m)*
 
 I was a game developer so right after reading the puzzle I already know what to do to solve it, coordinates are just the
 heart of a tons of games, even with ones that doesn't seem to have a coordinate system.
@@ -119,8 +119,12 @@ Btw, TIL that everyone has their own inputs for their AoC puzzles.
 > That's not the right answer; your answer is too low. Curiously, it's the right answer for someone else; you might be
 > logged in to the wrong account or just unlucky. In any case, you need to be using your puzzle input.
 
+I missed the part that the antennas themselves are also anti-nodes, I just need to add them to the `Set<string>`. I have
+a feeling that if there is 2 antennas that doesn't generate anti-nodes within bounds, the answer will be wrong but my
+current answer gave me the star so I won't investigate further.
+
 ```sh
 pnpm dev 8
 #> 369
-#> 
+#> 1169
 ```

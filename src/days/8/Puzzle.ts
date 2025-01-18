@@ -47,15 +47,41 @@ function getAntiNodes(map: string[][], isInfinite: boolean): Set<string> {
           continue;
         }
 
-        const coord1 = antennaVectors[ant1Index];
-        const coord2 = antennaVectors[ant2Index];
 
+        let coord1 = antennaVectors[ant1Index];
+        let coord2 = antennaVectors[ant2Index];
+
+        if (isInfinite) {
+          unqAntiNodes.add(JSON.stringify(coord1));
+          unqAntiNodes.add(JSON.stringify(coord2));
+        }
         const directVec = coord1.subtract(coord2);
-        const antiNode1 = coord1.add(directVec);
-        const antiNode2 = coord2.add(directVec.multiply(-1));
+        // eslint-disable-next-line no-constant-condition
+        while (true) {
+          const antiNode1 = coord1.add(directVec);
+          if (!isOutOfMap(map, antiNode1)) {
+            unqAntiNodes.add(JSON.stringify(antiNode1));
+            if (isInfinite) {
+              coord1 = antiNode1;
+            }
+          }
 
-        !isOutOfMap(map, antiNode1) && unqAntiNodes.add(JSON.stringify(antiNode1));
-        !isOutOfMap(map, antiNode2) && unqAntiNodes.add(JSON.stringify(antiNode2));
+          const antiNode2 = coord2.add(directVec.multiply(-1));
+          if (!isOutOfMap(map, antiNode2)) {
+            unqAntiNodes.add(JSON.stringify(antiNode2));
+            if (isInfinite) {
+              coord2 = antiNode2;
+            }
+          }
+
+          if (!isInfinite) {
+            break;
+          }
+
+          if (isInfinite && isOutOfMap(map, antiNode1) && isOutOfMap(map, antiNode2)) {
+            break;
+          }
+        }
       }
     }
   }
