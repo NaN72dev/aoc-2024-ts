@@ -34,12 +34,7 @@ function isOutOfMap(map: string[][], coord: Vector) {
   return coord.x < 0 || coord.x >= map[0].length || coord.y < 0 || coord.y >= map.length;
 }
 
-function isOverlap(map: string[][], coord1: Vector) {
-  return map[coord1.y][coord1.x] !== EMPTY;
-}
-
-const first = (input: string) => {
-  const map = parseInput(input);
+function getAntiNodes(map: string[][], isInfinite: boolean): Set<string> {
   const antennaMap = parseAntennas(map);
 
   const unqAntiNodes = new Set<string>();
@@ -65,15 +60,23 @@ const first = (input: string) => {
     }
   }
 
-  return unqAntiNodes.size;
+  return unqAntiNodes;
+}
+
+const first = (input: string) => {
+  const map = parseInput(input);
+  const antiNodes = getAntiNodes(map, false);
+  return antiNodes.size;
 };
 
 const expectedFirstSolution = 14;
 
 const second = (input: string) => {
-  return 'solution 2';
+  const map = parseInput(input);
+  const antiNodes = getAntiNodes(map, true);
+  return antiNodes.size;
 };
 
-const expectedSecondSolution = 'solution 2';
+const expectedSecondSolution = 34;
 
 export { first, expectedFirstSolution, second, expectedSecondSolution };
